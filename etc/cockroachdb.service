@@ -1,0 +1,10 @@
+[Unit]
+Description=CockroachDB
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/cockroach start --certs-dir=/etc/cockroachdb/certs --host=localhost --http-host=localhost
+
+[Install]
+WantedBy=multi-user.target
