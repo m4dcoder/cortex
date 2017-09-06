@@ -5,6 +5,7 @@ python:
 
 install:
     - pip install tox-travis
+    - .travis/install_cockroachdb.sh
 
 script:
     - tox
